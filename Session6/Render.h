@@ -11,7 +11,8 @@ class Render
 public:
     Window *WindowInit;
     shader TheShader;
-    Mesh mesh;
+    Mesh House;
+    Mesh Ground;
     Camera camera;
 
     float rotation = 0.0f;

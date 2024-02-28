@@ -14,9 +14,11 @@ public:
 
     int modelLoc;
 
+    bool bRotate = false;
+
     glm::mat4 model;
 
-    void creatignVertices(glm::vec3 setposition);
+    void creatignVertices(glm::vec3 setposition, std::string name);
     void drawMesh(shader* shader);
     void initMesh(shader* Shader);
     glm::mat4 getModelMatrix(float rotation);
