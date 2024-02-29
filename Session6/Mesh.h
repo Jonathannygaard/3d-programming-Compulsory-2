@@ -21,7 +21,7 @@ public:
     void creatignVertices(glm::vec3 setposition, std::string name);
     void drawMesh(shader* shader);
     void initMesh(shader* Shader);
-    glm::mat4 getModelMatrix(float rotation);
+    glm::mat4 getModelMatrix(float rotation = 0.f);
     glm::vec3 position;
     
 };

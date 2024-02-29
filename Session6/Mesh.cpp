@@ -8,6 +8,7 @@ void Mesh::creatignVertices(glm::vec3 setposition, std::string name)
     position = setposition;
     if(name == "House")
     {
+        vertices.clear();
         vertices.emplace_back(-0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f); //Front Top Left 0
         vertices.emplace_back(0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f); //Front Top Right 1
         vertices.emplace_back(0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f); //Front Bottom Right 2
@@ -16,6 +17,8 @@ void Mesh::creatignVertices(glm::vec3 setposition, std::string name)
         vertices.emplace_back(0.5f, 0.5f, -0.5f, 0.0f, 0.0f, 1.0f); //Back Top Right 5
         vertices.emplace_back(0.5f, -0.5f, -0.5f, 0.0f, 0.0f, 1.0f);//Back Bottom Right 6
         vertices.emplace_back(-0.5f, -0.5f, -0.5f, 0.0f, 0.0f, 1.0f);//Back Bottom Left 7
+
+        indices.clear();
         //Front Side
         indices.emplace_back(0);
         indices.emplace_back(2);
@@ -72,11 +75,13 @@ void Mesh::creatignVertices(glm::vec3 setposition, std::string name)
     }
     if(name == "Ground")
     {
+        vertices.clear();
         vertices.emplace_back(10.f,0.f,10.f, 0.0f, 1.0f, 0.0f);
         vertices.emplace_back(10.f,0.f,-10.f, 0.0f, 1.0f, 0.0f);
         vertices.emplace_back(-10.f,0.f,-10.f, 0.0f, 1.0f, 0.0f);
         vertices.emplace_back(-10.f,0.f,10.f, 0.0f, 1.0f, 0.0f);
 
+        indices.clear();
         indices.emplace_back(3);
         indices.emplace_back(2);
         indices.emplace_back(1);

@@ -10,7 +10,7 @@ void Camera::initCamera(shader* Shader)
 
 glm::mat4 Camera::getView()
 {
-    return glm::lookAt(cameraPos, cameraFront, cameraUp);
+    return glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
 }
 
 glm::mat4 Camera::getProjection(float width, float height)

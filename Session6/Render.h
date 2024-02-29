@@ -21,5 +21,4 @@ public:
     void initTick(Window* initptr);
     void processInput(GLFWwindow *window);
     void ticking();
-    
 };
